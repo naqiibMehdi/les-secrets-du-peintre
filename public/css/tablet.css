@@ -1,0 +1,118 @@
+@media(max-width:960px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left {
+    padding: 60px 30px 40px;
+  }
+
+  .hero-right {
+    padding: 40px 30px 60px;
+  }
+
+  header {
+    padding: 0 20px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  .valeurs-grid,
+  .avis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partenaires-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 48px 30px;
+  }
+
+  .section-valeurs,
+  .section-partenaires,
+  .section-avis {
+    padding: 60px 30px;
+  }
+
+  .cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 52px 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 30px;
+    text-align: center;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .carousel-cell {
+    width: 100%;
+    height: 300px;
+  }
+
+  header {
+    padding: 0 20px;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  .devis-hero {
+    min-height: auto;
+  }
+
+  .hero-inner {
+    padding: 60px 24px;
+  }
+
+  .devis-body {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    gap: 28px;
+  }
+
+  .form-card {
+    padding: 32px 24px;
+  }
+
+  .fields-row {
+    grid-template-columns: 1fr;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 48px 24px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 24px;
+    text-align: center;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
