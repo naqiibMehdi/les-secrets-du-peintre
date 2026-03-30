@@ -10,3 +10,7 @@ Route::get('/', function () {
 Route::get("/quote", function() {
     return view("quote");
 })->name("quote");
+
+Route::get("/courses/coated", function(){
+    return view("formations.enduit");
+})->name("enduit");

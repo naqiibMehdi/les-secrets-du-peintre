@@ -35,7 +35,7 @@
           <a href="#" class="s1-link"><span>Service travaux</span><span class="s1-arrow">→</span></a>
           <a href="#" class="s1-link"><span>Diagnostics travaux</span><span class="s1-arrow">→</span></a>
           <a href="#" class="s1-link"><span>Accompagnement travaux</span><span class="s1-arrow">→</span></a>
-          <a href="#" class="s1-link"><span>Formation enduits / peinture</span><span class="s1-arrow">→</span></a>
+          <a href="{{  route("enduit") }}" class="s1-link"><span>Formation enduits / peinture</span><span class="s1-arrow">→</span></a>
           <a href="#" class="s1-link"><span>Formation airless</span><span class="s1-arrow">→</span></a>
           <a href="#" class="s1-link"><span>Réalisation</span><span class="s1-arrow">→</span></a>
         </div>
