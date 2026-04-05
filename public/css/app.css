@@ -44,6 +44,10 @@ header {
   border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
+h1 {
+  text-wrap: balance;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -598,6 +602,10 @@ nav a:hover::after {
 .valeur-card:hover {
   box-shadow: 0 12px 40px rgba(0, 0, 0, .08);
   transform: translateY(-4px);
+}
+
+.valeur-card > img{
+  padding-bottom: 5px;
 }
 
 .v-icon {
@@ -1345,13 +1353,6 @@ footer {
         /* ══════════════════════════
        HERO — image de fond texturée
     ══════════════════════════ */
-    .hero {
-      margin-top: 80px;
-      min-height: 900px;
-      position: relative;
-      display: flex; align-items: flex-end;
-      overflow: hidden;
-    }
  
     /* Image de fond simulée : texture enduit / béton */
     .hero-bg {
@@ -1850,3 +1851,30 @@ footer {
     .hero-title      { animation: fadeUp .7s .16s ease both; }
     .hero-subtitle   { animation: fadeUp .7s .24s ease both; }
     .hero-ctas       { animation: fadeUp .7s .32s ease both; }
+
+    /* CSS POUR AUTRES COMPOSENTS */
+
+.alert {
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-icon {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.alert-message {
+    font-size: 14px;
+}
+

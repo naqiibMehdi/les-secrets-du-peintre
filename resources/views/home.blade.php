@@ -69,19 +69,22 @@
     </div>
     <div class="valeurs-grid">
       <div class="valeur-card">
-        <div class="v-icon">🤝</div>
+        {{-- <div class="v-icon">🤝</div> --}}
+        <img src="{{ asset("storage/values/valeur-humaine.png") }}" width="100" height="100"/>
         <h3>Valeurs humaines</h3>
         <p>L'écoute et la proximité au cœur de notre démarche. Chaque client est accompagné avec bienveillance dans une
           relation de confiance durable.</p>
       </div>
       <div class="valeur-card">
-        <div class="v-icon">⭐</div>
+        {{-- <div class="v-icon">⭐</div> --}}
+        <img src="{{ asset("storage/values/valeur-qualite.png") }}" width="100" height="100"/>
         <h3>Valeurs de qualité</h3>
         <p>L'excellence du travail bien fait est notre exigence absolue. Matériaux premium, techniques maîtrisées,
           finitions irréprochables.</p>
       </div>
       <div class="valeur-card">
-        <div class="v-icon">📚</div>
+        {{-- <div class="v-icon">📚</div> --}}
+        <img src="{{ asset("storage/values/valeur-responsabilite.png") }}" width="100" height="100"/>
         <h3>Transmission du savoir</h3>
         <p>Partager les gestes du métier est notre mission. La compétence se construit avec des bases solides et un
           formateur impliqué.</p>
