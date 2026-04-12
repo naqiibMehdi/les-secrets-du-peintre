@@ -143,7 +143,7 @@ nav a:hover::after {
 
 /* HERO */
 .hero {
-  min-height: 900px;
+  min-height: 750px;
   padding-top: 80px;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -1423,7 +1423,7 @@ footer {
     .hero-content {
       position: relative; z-index: 2;
       padding: 80px 60px 100px 100px;
-      max-width: 680px;
+      max-width: 800px;
     }
  
     .hero-breadcrumb {
@@ -1528,29 +1528,48 @@ footer {
     .section-intro {
       padding: 90px 60px;
       background: var(--blanc);
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 80px;
-      align-items: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
     }
-    .intro-left { position: sticky; top: 100px; }
+
+    .secttion-intro * {
+      max-width: 1400px;
+    }
+    .intro-left { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .section-eyebrow {
       font-size: 10.5px; letter-spacing: 3.5px; text-transform: uppercase;
       color: var(--ocre); font-weight: 600; margin-bottom: 16px;
       display: flex; align-items: center; gap: 12px;
     }
-    .section-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--ocre); }
+    .section-eyebrow::before 
+    { content: ''; 
+      width: 28px; 
+      height: 1px; 
+      background: var(--ocre); 
+    }
+
     .intro-left h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(28px, 3vw, 42px);
       font-weight: 700; line-height: 1.1; color: var(--noir);
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
     .intro-left p {
       font-size: 0.88rem; line-height: 1.8; color: var(--gris);
     }
     .intro-right {
-      font-size: 1.05rem; line-height: 1.9; color: #444;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.05rem; 
+      line-height: 1.9; 
+      color: #444;
     }
     .intro-right .lead {
       font-family: 'Cormorant Garamond', serif;
@@ -1558,11 +1577,15 @@ footer {
       line-height: 1.55;
       color: var(--noir);
       font-weight: 600;
-      margin-bottom: 28px;
-      padding-bottom: 28px;
+      margin-bottom: 1rem;
       border-bottom: 1px solid var(--border);
     }
-    .intro-right p { font-size: 0.95rem; line-height: 1.85; color: #555; }
+    .intro-right p { 
+      font-size: 0.95rem; 
+      line-height: 1.85; 
+      color: #555; 
+      text-align: center;
+    }
  
     /* ══════════════════════════
        PROGRAMME — avec image de fond
@@ -1570,6 +1593,7 @@ footer {
     .section-programme {
       position: relative;
       overflow: hidden;
+      background-color: var(--blanc);
     }
  
     /* Image de fond texturée pleine largeur */
@@ -1591,19 +1615,31 @@ footer {
     }
  
     .prog-inner {
-      position: relative; z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative; 
+      z-index: 1;
       padding: 90px 60px;
     }
     .prog-header {
       display: flex; align-items: flex-end; justify-content: space-between;
       margin-bottom: 64px; gap: 40px;
     }
-    .prog-header-left { max-width: 520px; }
+    .prog-header-left { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 520px; 
+    }
+
     .prog-header h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(34px, 4vw, 56px);
       font-weight: 700; line-height: 1.05; color: var(--creme);
       margin-top: 16px;
+      text-align: center;
+      color: var(--noir);
     }
     .prog-header h2 em { font-style: italic; color: var(--ocre); }
     .prog-header-right {
@@ -1623,67 +1659,47 @@ footer {
  
     /* Grille des items du programme */
     .prog-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3px;
+      display: flex;
+      flex-direction: column;
     }
     .prog-item {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.05);
       padding: 32px 28px;
       display: flex; align-items: flex-start; gap: 20px;
       transition: background .3s, border-color .3s;
       cursor: default;
     }
-    .prog-item:hover {
-      background: rgba(201,168,76,0.06);
-      border-color: rgba(201,168,76,0.2);
-    }
     .prog-num {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.4rem; font-weight: 700;
-      color: rgba(201,168,76,0.2);
+      color: rgba(201,168,76);
       line-height: 1; flex-shrink: 0;
       min-width: 40px;
       transition: color .3s;
     }
-    .prog-item:hover .prog-num { color: rgba(201,168,76,0.5); }
     .prog-text { display: flex; flex-direction: column; gap: 8px; padding-top: 6px; }
     .prog-title {
-      font-size: 0.95rem; font-weight: 600; color: var(--creme);
+      font-size: 0.95rem; font-weight: 600; color: var(--noir);
     }
     .prog-desc {
-      font-size: 0.82rem; line-height: 1.65; color: rgba(248,245,238,0.45);
+      font-size: 0.82rem; line-height: 1.65; color: var(--noir);
     }
  
     /* ══════════════════════════
        POUR QUI + OBJECTIF — double colonne sur fond clair
     ══════════════════════════ */
     .section-details {
-      padding: 90px 60px;
-      background: var(--creme);
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 3px;
     }
     .detail-block {
-      background: var(--blanc);
       border: 1px solid var(--border);
       padding: 56px 48px;
       display: flex; flex-direction: column; gap: 24px;
       position: relative; overflow: hidden;
       transition: transform .3s;
     }
-    .detail-block::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: var(--ocre);
-      transform: scaleX(0); transform-origin: left;
-      transition: transform .4s;
-    }
-    .detail-block:hover::before { transform: scaleX(1); }
-    .detail-block:hover { transform: translateY(-4px); }
- 
+
     .detail-icon {
       width: 52px; height: 52px;
       background: var(--anth);
