@@ -1,8 +1,7 @@
 <x-layout title="Accueil">
 
     <!-- ══════ HERO ══════ -->
-    <section class="hero">
-
+    <section class="hero hero-picture">
         <div class="hero-content">
             <div class="hero-breadcrumb">
                 <a href="{{ route('home') }}">Accueil</a>
@@ -42,7 +41,7 @@
             <p>
                 Cette formation complète vous transmet toutes les techniques essentielles pour réussir vos travaux
                 d'enduit, du rebouchage jusqu'au ratissage final. Qu'il s'agisse d'un premier contact avec l'enduit ou
-                d'un perfectionnement de votre geste, Marc Delacroix vous accompagne pas à pas avec des méthodes
+                d'un perfectionnement de votre geste, Alexandre FATRAS vous accompagne pas à pas avec des méthodes
                 directement issues du terrain professionnel.
             </p>
         </div>
@@ -61,7 +60,8 @@
             </div>
             <div class="detail-block">
                 <h3>Prérequis</h3>
-                <p>Aucun prérequis technique n'est nécessaire pour suivre cette formation. Seule la motivation compte.
+                <p>Aucun prérequis technique n'est nécessaire pour suivre cette formation.<br> Seule la motivation
+                    compte.
                 </p>
                 <ul>
                     <li>Aucune expérience préalable requise</li>
@@ -134,7 +134,7 @@
                             surface vraiment homogène.</span>
                     </div>
                 </div>
-                <div class="prog-item" style="grid-column: 1 / -1;">
+                <div class="prog-item">
                     <span class="prog-num">07</span>
                     <div class="prog-text">
                         <span class="prog-title">Éviter les défauts et gagner en efficacité</span>
@@ -143,6 +143,7 @@
                     </div>
                 </div>
             </div>
+            <x-button href="{{ route('quote') }}" style="margin-top: 2rem">Demander un devis</x-button>
         </div>
     </section>
 

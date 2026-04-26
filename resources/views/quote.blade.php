@@ -75,7 +75,6 @@
             </div>
 
             <div class="guarantee-card">
-                <div class="guarantee-icon">🛡️</div>
                 <div class="guarantee-text">
                     <strong>Devis 100% gratuit</strong>
                     Aucun engagement à la réception du devis. Vous êtes libre d'accepter ou non.

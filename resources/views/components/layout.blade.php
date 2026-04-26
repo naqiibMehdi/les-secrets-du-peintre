@@ -8,12 +8,12 @@
         <link rel="stylesheet" href="{{ asset("css/app.css") }}">
         <link rel="stylesheet" href="{{ asset("css/tablet.css") }}">
         <link rel="stylesheet" href="{{ asset("css/mobile.css") }}">
-        {{  !request()->is("/") ? "": $cdnCss }}
+        @stack('head')
     </head>
     <body>
         <x-partials.header/>
         {{  $slot }}
         <x-partials.footer/>
     </body>
-    {{  !request()->is("/") ? "" : $cdnScript }}
+    @stack('scripts')
 </html>

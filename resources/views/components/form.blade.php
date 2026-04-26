@@ -6,7 +6,6 @@
         <div class="field-group">
             <label for="prenom">Prénom <span class="label-req">*</span></label>
             <div class="field-wrap">
-                <span class="field-icon">👤</span>
                 <input type="text" id="prenom" name="first_name" placeholder="Jean"
                     value="{{ old('first_name') }}" />
             </div>
@@ -17,7 +16,6 @@
         <div class="field-group">
             <label for="nom">Nom <span class="label-req">*</span></label>
             <div class="field-wrap">
-                <span class="field-icon">👤</span>
                 <input type="text" id="nom" name="last_name" placeholder="Dupont"
                     value="{{ old('last_name') }}" />
             </div>
@@ -28,7 +26,6 @@
         <div class="field-group">
             <label for="email">Adresse e-mail <span class="label-req">*</span></label>
             <div class="field-wrap">
-                <span class="field-icon">✉️</span>
                 <input type="email" id="email" name="email" placeholder="jean.dupont@email.fr"
                     value="{{ old('email') }}" />
             </div>

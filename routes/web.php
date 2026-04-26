@@ -15,3 +15,7 @@ Route::post("/quote", [QuoteController::class, "store"]);
 Route::get("/courses/coated", function(){
     return view("formations.enduit");
 })->name("enduit");
+
+Route::get("/about", function(){
+    return view("about");
+})->name("about");

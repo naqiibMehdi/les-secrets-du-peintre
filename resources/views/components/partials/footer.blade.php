@@ -13,7 +13,7 @@
           href="#">Contact & devis</a>
       </div>
       <div class="footer-col">
-        <h4>Informations</h4><a href="#">À propos</a><a href="#">Blog & conseils</a><a href="#">Témoignages</a><a
+        <h4>Informations</h4><a href="{{ route('about') }}">À propos</a><a href="#">Blog & conseils</a><a href="#">Témoignages</a><a
           href="#">FAQ</a>
       </div>
     </div>
