@@ -41,38 +41,6 @@
                     de formation et d'accompagnement technique. Un savoir-faire acquis sur le terrain,
                     transmis avec passion.
                 </p>
-
-                {{-- Badges rôles --}}
-                <div style="display:flex; flex-wrap:wrap; gap:10px;">
-                    <span
-                        style="display:inline-flex; align-items:center;
-                                 font-size:10.5px; font-weight:600; letter-spacing:1.5px;
-                                 text-transform:uppercase; color:var(--ocre);
-                                 background:rgba(201,168,76,0.08);
-                                 border:1px solid rgba(201,168,76,0.28);
-                                 padding:7px 14px; border-radius:2px;">
-                        Artisan peintre
-                    </span>
-                    <span
-                        style="display:inline-flex; align-items:center;
-                                 font-size:10.5px; font-weight:600; letter-spacing:1.5px;
-                                 text-transform:uppercase; color:var(--ocre);
-                                 background:rgba(201,168,76,0.08);
-                                 border:1px solid rgba(201,168,76,0.28);
-                                 padding:7px 14px; border-radius:2px;">
-                        Formateur
-                    </span>
-                    <span
-                        style="display:inline-flex; align-items:center;
-                                 font-size:10.5px; font-weight:600; letter-spacing:1.5px;
-                                 text-transform:uppercase; color:var(--ocre);
-                                 background:rgba(201,168,76,0.08);
-                                 border:1px solid rgba(201,168,76,0.28);
-                                 padding:7px 14px; border-radius:2px;">
-                        Consultant technique
-                    </span>
-                </div>
-
                 {{-- CTAs --}}
                 <div class="hero-ctas">
                     <x-button href="{{ route('quote') }}">Demander un devis</x-button>

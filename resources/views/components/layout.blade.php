@@ -14,6 +14,6 @@
         <x-partials.header/>
         {{  $slot }}
         <x-partials.footer/>
+        @stack('scripts')
     </body>
-    @stack('scripts')
 </html>

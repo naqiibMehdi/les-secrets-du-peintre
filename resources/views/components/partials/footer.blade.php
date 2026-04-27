@@ -1,8 +1,11 @@
 <footer>
     <div class="footer-main">
       <div>
-        <div class="social-links"><a href="#" class="soc">📘</a><a href="#" class="soc">📸</a><a href="#"
-            class="soc">▶️</a><a href="#" class="soc">💼</a></div>
+        <div class="social-links">
+          <p style="color: white">Instagram</p>
+          <p style="color: white">Linkedin</p>
+          <p style="color: white">Facebook</p>
+        </div>
       </div>
       <div class="footer-col">
         <h4>Formations</h4><a href="#">Formation airless</a><a href="#">Formation enduits</a><a href="#">Diagnostics
