@@ -836,25 +836,14 @@ footer {
   display: flex;
   gap: 10px;
   margin-top: 28px;
-}
 
-.soc {
-  width: 38px;
-  height: 38px;
-  background: var(--anth2);
-  border: 1px solid rgba(255, 255, 255, .08);
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  text-decoration: none;
-  transition: all .25s;
-}
+  &>a svg {
+    fill: var(--blanc)
+  }
 
-.soc:hover {
-  background: var(--ocre);
-  border-color: var(--ocre);
+  &>a svg:hover {
+    filter: drop-shadow(0px 3px 4px var(--blanc));
+  }
 }
 
 .footer-col h4 {
@@ -2499,40 +2488,71 @@ select:focus+.field-icon {
 .alert-message {
   font-size: 14px;
 }
- 
+
 /* ============================================================
    ANIMATIONS KEYFRAMES
    ============================================================ */
- 
+
 @keyframes ap-fadeUp {
-  from { opacity: 0; transform: translateY(32px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
- 
+
 @keyframes ap-fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
- 
+
 @keyframes ap-lineGrow {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
 }
- 
+
 @keyframes ap-slideRight {
-  from { transform: translateX(-20px); opacity: 0; }
-  to   { transform: translateX(0);     opacity: 1; }
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
- 
+
 @keyframes ap-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.3); }
-  50%       { box-shadow: 0 0 0 10px rgba(201, 168, 76, 0); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(201, 168, 76, 0);
+  }
 }
- 
+
 /* ============================================================
    HERO ABOUT OAGE
    ============================================================ */
- 
+
 .ap-hero {
   position: relative;
   min-height: 92vh;
@@ -2541,7 +2561,7 @@ select:focus+.field-icon {
   overflow: hidden;
   background-color: var(--anth);
 }
- 
+
 /* Texture grain SVG en pseudo-élément */
 .ap-hero::before {
   content: '';
@@ -2553,7 +2573,7 @@ select:focus+.field-icon {
   background-size: 400px 400px, cover;
   pointer-events: none;
 }
- 
+
 /* Halo ocre droit */
 .ap-hero__glow {
   position: absolute;
@@ -2562,14 +2582,12 @@ select:focus+.field-icon {
   width: 700px;
   height: 700px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(201, 168, 76, 0.07) 0%,
-    transparent 65%
-  );
+  background: radial-gradient(circle,
+      rgba(201, 168, 76, 0.07) 0%,
+      transparent 65%);
   pointer-events: none;
 }
- 
+
 /* Cercles concentriques décoratifs */
 .ap-hero__rings {
   position: absolute;
@@ -2579,6 +2597,7 @@ select:focus+.field-icon {
   height: 500px;
   pointer-events: none;
 }
+
 .ap-hero__rings::before,
 .ap-hero__rings::after {
   content: '';
@@ -2586,14 +2605,16 @@ select:focus+.field-icon {
   border-radius: 50%;
   border: 1px solid rgba(201, 168, 76, 0.08);
 }
+
 .ap-hero__rings::before {
   inset: 0;
 }
+
 .ap-hero__rings::after {
   inset: 60px;
   border-color: rgba(201, 168, 76, 0.12);
 }
- 
+
 /* Ligne verticale */
 .ap-hero__vline {
   position: absolute;
@@ -2601,18 +2622,16 @@ select:focus+.field-icon {
   top: 12%;
   bottom: 12%;
   width: 1px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--ocre) 20%,
-    var(--ocre) 80%,
-    transparent
-  );
+  background: linear-gradient(to bottom,
+      transparent,
+      var(--ocre) 20%,
+      var(--ocre) 80%,
+      transparent);
   opacity: 0.3;
   transform-origin: top;
   animation: ap-lineGrow 1.2s 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
- 
+
 /* Ligne dorée bas de hero */
 .ap-hero__bar {
   position: absolute;
@@ -2620,17 +2639,15 @@ select:focus+.field-icon {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--ocre) 25%,
-    var(--ocre-l) 50%,
-    var(--ocre) 75%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      transparent 0%,
+      var(--ocre) 25%,
+      var(--ocre-l) 50%,
+      var(--ocre) 75%,
+      transparent 100%);
   opacity: 0.7;
 }
- 
+
 /* Contenu hero */
 .ap-hero__inner {
   position: relative;
@@ -2638,7 +2655,7 @@ select:focus+.field-icon {
   padding: 100px 60px 100px 110px;
   max-width: 800px;
 }
- 
+
 .ap-hero__eyebrow {
   display: inline-flex;
   align-items: center;
@@ -2651,6 +2668,7 @@ select:focus+.field-icon {
   margin-bottom: 28px;
   animation: ap-fadeIn 0.8s 0.2s ease both;
 }
+
 .ap-hero__eyebrow::before {
   content: '';
   display: block;
@@ -2659,7 +2677,7 @@ select:focus+.field-icon {
   background: var(--ocre);
   flex-shrink: 0;
 }
- 
+
 .ap-hero__title {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: clamp(46px, 6.5vw, 88px);
@@ -2669,12 +2687,13 @@ select:focus+.field-icon {
   margin-bottom: 10px;
   animation: ap-fadeUp 0.8s 0.35s ease both;
 }
+
 .ap-hero__title em {
   font-style: italic;
   color: var(--ocre);
   display: block;
 }
- 
+
 .ap-hero__subtitle {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: clamp(16px, 2vw, 21px);
@@ -2685,7 +2704,7 @@ select:focus+.field-icon {
   max-width: 520px;
   animation: ap-fadeUp 0.8s 0.45s ease both;
 }
- 
+
 /* Tags rôles */
 .ap-hero__roles {
   display: flex;
@@ -2693,6 +2712,7 @@ select:focus+.field-icon {
   gap: 10px;
   animation: ap-fadeUp 0.8s 0.55s ease both;
 }
+
 .ap-hero__role {
   display: inline-flex;
   align-items: center;
@@ -2708,11 +2728,12 @@ select:focus+.field-icon {
   border-radius: 2px;
   transition: background 0.25s, border-color 0.25s;
 }
+
 .ap-hero__role:hover {
   background: rgba(201, 168, 76, 0.14);
   border-color: rgba(201, 168, 76, 0.5);
 }
- 
+
 /* Scroll hint */
 .ap-hero__scroll {
   position: absolute;
@@ -2727,6 +2748,7 @@ select:focus+.field-icon {
   color: rgba(201, 168, 76, 0.35);
   animation: ap-fadeIn 1.2s 1s ease both;
 }
+
 .ap-hero__scroll::after {
   content: '';
   display: block;
@@ -2734,11 +2756,11 @@ select:focus+.field-icon {
   height: 1px;
   background: rgba(201, 168, 76, 0.3);
 }
- 
+
 /* ============================================================
    INTRO — citation forte
    ============================================================ */
- 
+
 .ap-intro {
   background: var(--blanc);
   padding: 90px 60px;
@@ -2747,7 +2769,7 @@ select:focus+.field-icon {
   gap: 80px;
   align-items: start;
 }
- 
+
 .ap-intro__left {
   position: sticky;
   top: 100px;
@@ -2755,7 +2777,7 @@ select:focus+.field-icon {
   flex-direction: column;
   gap: 20px;
 }
- 
+
 .ap-intro__number {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: 100px;
@@ -2765,7 +2787,7 @@ select:focus+.field-icon {
   letter-spacing: -4px;
   user-select: none;
 }
- 
+
 .ap-intro__stat-label {
   font-size: 10.5px;
   font-weight: 600;
@@ -2776,9 +2798,9 @@ select:focus+.field-icon {
   border-top: 2px solid var(--ocre);
   width: fit-content;
 }
- 
+
 .ap-intro__right {}
- 
+
 .ap-intro__lead {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: clamp(22px, 2.8vw, 32px);
@@ -2789,24 +2811,24 @@ select:focus+.field-icon {
   padding-bottom: 32px;
   border-bottom: 1px solid var(--border);
 }
- 
+
 .ap-intro__body {
   font-size: 0.95rem;
   line-height: 1.9;
   color: #555;
 }
- 
+
 /* ============================================================
    EXPERTISES — section sur fond anthracite
    ============================================================ */
- 
+
 .ap-expertises {
   position: relative;
   background-color: var(--anth);
   overflow: hidden;
   padding: 90px 60px;
 }
- 
+
 /* Texture fond */
 .ap-expertises::before {
   content: '';
@@ -2817,7 +2839,7 @@ select:focus+.field-icon {
   background-size: 300px 300px;
   pointer-events: none;
 }
- 
+
 /* Halo droit */
 .ap-expertises::after {
   content: '';
@@ -2827,19 +2849,17 @@ select:focus+.field-icon {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(201, 168, 76, 0.06) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle,
+      rgba(201, 168, 76, 0.06) 0%,
+      transparent 70%);
   pointer-events: none;
 }
- 
+
 .ap-expertises__inner {
   position: relative;
   z-index: 1;
 }
- 
+
 .ap-section-eyebrow {
   font-size: 10.5px;
   font-weight: 600;
@@ -2851,6 +2871,7 @@ select:focus+.field-icon {
   align-items: center;
   gap: 12px;
 }
+
 .ap-section-eyebrow::before {
   content: '';
   display: block;
@@ -2858,7 +2879,7 @@ select:focus+.field-icon {
   height: 1px;
   background: var(--ocre);
 }
- 
+
 .ap-section-title {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: clamp(30px, 4vw, 52px);
@@ -2866,17 +2887,27 @@ select:focus+.field-icon {
   line-height: 1.08;
   margin-bottom: 60px;
 }
-.ap-section-title--light { color: var(--creme); }
-.ap-section-title--dark  { color: var(--noir); }
-.ap-section-title em     { font-style: italic; color: var(--ocre); }
- 
+
+.ap-section-title--light {
+  color: var(--creme);
+}
+
+.ap-section-title--dark {
+  color: var(--noir);
+}
+
+.ap-section-title em {
+  font-style: italic;
+  color: var(--ocre);
+}
+
 /* Grille expertises : 2 groupes côte à côte */
 .ap-expertises__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3px;
 }
- 
+
 .ap-expertise-group {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.055);
@@ -2885,6 +2916,7 @@ select:focus+.field-icon {
   position: relative;
   overflow: hidden;
 }
+
 .ap-expertise-group::before {
   content: '';
   position: absolute;
@@ -2897,9 +2929,16 @@ select:focus+.field-icon {
   transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.ap-expertise-group:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(201, 168, 76, 0.2); }
-.ap-expertise-group:hover::before { transform: scaleX(1); }
- 
+
+.ap-expertise-group:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(201, 168, 76, 0.2);
+}
+
+.ap-expertise-group:hover::before {
+  transform: scaleX(1);
+}
+
 .ap-expertise-group__icon {
   width: 50px;
   height: 50px;
@@ -2912,10 +2951,11 @@ select:focus+.field-icon {
   margin-bottom: 20px;
   transition: background 0.3s;
 }
+
 .ap-expertise-group:hover .ap-expertise-group__icon {
   background: rgba(201, 168, 76, 0.18);
 }
- 
+
 .ap-expertise-group__title {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: 1.35rem;
@@ -2923,13 +2963,14 @@ select:focus+.field-icon {
   color: var(--creme);
   margin-bottom: 18px;
 }
- 
+
 .ap-expertise-group__list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .ap-expertise-group__list li {
   display: flex;
   align-items: flex-start;
@@ -2939,9 +2980,11 @@ select:focus+.field-icon {
   color: rgba(248, 245, 238, 0.5);
   transition: color 0.25s;
 }
+
 .ap-expertise-group:hover .ap-expertise-group__list li {
   color: rgba(248, 245, 238, 0.7);
 }
+
 .ap-expertise-group__list li::before {
   content: '→';
   color: var(--ocre);
@@ -2950,26 +2993,27 @@ select:focus+.field-icon {
   margin-top: 2px;
   transition: transform 0.25s;
 }
+
 .ap-expertise-group:hover .ap-expertise-group__list li::before {
   transform: translateX(3px);
 }
- 
+
 /* ============================================================
    ACCOMPAGNEMENT — fond crème, 3 colonnes
    ============================================================ */
- 
+
 .ap-accompagnement {
   background: var(--creme);
   padding: 90px 60px;
 }
- 
+
 .ap-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-top: 56px;
 }
- 
+
 .ap-card {
   background: var(--blanc);
   border: 1px solid var(--border);
@@ -2982,6 +3026,7 @@ select:focus+.field-icon {
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
+
 .ap-card::after {
   content: '';
   position: absolute;
@@ -2994,13 +3039,17 @@ select:focus+.field-icon {
   transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .ap-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
   border-color: rgba(201, 168, 76, 0.3);
 }
-.ap-card:hover::after { transform: scaleX(1); }
- 
+
+.ap-card:hover::after {
+  transform: scaleX(1);
+}
+
 .ap-card__icon {
   width: 52px;
   height: 52px;
@@ -3012,8 +3061,11 @@ select:focus+.field-icon {
   font-size: 1.35rem;
   transition: background 0.3s;
 }
-.ap-card:hover .ap-card__icon { background: var(--ocre); }
- 
+
+.ap-card:hover .ap-card__icon {
+  background: var(--ocre);
+}
+
 .ap-card__title {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: 1.35rem;
@@ -3021,17 +3073,17 @@ select:focus+.field-icon {
   color: var(--noir);
   line-height: 1.2;
 }
- 
+
 .ap-card__desc {
   font-size: 0.875rem;
   line-height: 1.75;
   color: var(--gris);
 }
- 
+
 /* ============================================================
    ENGAGEMENT — citation mise en avant avec fond sombre
    ============================================================ */
- 
+
 .ap-engagement {
   position: relative;
   min-height: 380px;
@@ -3042,7 +3094,7 @@ select:focus+.field-icon {
   text-align: center;
   background-color: var(--anth);
 }
- 
+
 /* Texture */
 .ap-engagement::before {
   content: '';
@@ -3054,7 +3106,7 @@ select:focus+.field-icon {
   background-size: 500px 500px, cover;
   pointer-events: none;
 }
- 
+
 /* Halo central */
 .ap-engagement__glow {
   position: absolute;
@@ -3063,14 +3115,12 @@ select:focus+.field-icon {
   transform: translate(-50%, -50%);
   width: 600px;
   height: 400px;
-  background: radial-gradient(
-    ellipse,
-    rgba(201, 168, 76, 0.07) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(ellipse,
+      rgba(201, 168, 76, 0.07) 0%,
+      transparent 70%);
   pointer-events: none;
 }
- 
+
 /* Ligne déco haut & bas */
 .ap-engagement__bar-top,
 .ap-engagement__bar-bottom {
@@ -3078,25 +3128,29 @@ select:focus+.field-icon {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(201, 168, 76, 0.35) 30%,
-    rgba(201, 168, 76, 0.55) 50%,
-    rgba(201, 168, 76, 0.35) 70%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(201, 168, 76, 0.35) 30%,
+      rgba(201, 168, 76, 0.55) 50%,
+      rgba(201, 168, 76, 0.35) 70%,
+      transparent 100%);
 }
-.ap-engagement__bar-top    { top: 0; }
-.ap-engagement__bar-bottom { bottom: 0; }
- 
+
+.ap-engagement__bar-top {
+  top: 0;
+}
+
+.ap-engagement__bar-bottom {
+  bottom: 0;
+}
+
 .ap-engagement__inner {
   position: relative;
   z-index: 2;
   padding: 80px 60px;
   max-width: 720px;
 }
- 
+
 .ap-engagement__tag {
   display: inline-flex;
   align-items: center;
@@ -3108,6 +3162,7 @@ select:focus+.field-icon {
   font-weight: 600;
   margin-bottom: 28px;
 }
+
 .ap-engagement__tag::before,
 .ap-engagement__tag::after {
   content: '';
@@ -3116,7 +3171,7 @@ select:focus+.field-icon {
   height: 1px;
   background: rgba(201, 168, 76, 0.5);
 }
- 
+
 .ap-engagement__quote {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: clamp(22px, 3.2vw, 38px);
@@ -3125,11 +3180,12 @@ select:focus+.field-icon {
   color: var(--creme);
   margin-bottom: 32px;
 }
+
 .ap-engagement__quote em {
   font-style: italic;
   color: var(--ocre);
 }
- 
+
 .ap-engagement__line {
   width: 60px;
   height: 2px;
@@ -3137,11 +3193,11 @@ select:focus+.field-icon {
   margin: 0 auto 36px;
   border-radius: 2px;
 }
- 
+
 /* ============================================================
    CTA — boutons d'action
    ============================================================ */
- 
+
 .ap-cta {
   background: var(--blanc);
   padding: 80px 60px;
@@ -3152,8 +3208,11 @@ select:focus+.field-icon {
   border-top: 1px solid var(--border);
   flex-wrap: wrap;
 }
- 
-.ap-cta__left { max-width: 520px; }
+
+.ap-cta__left {
+  max-width: 520px;
+}
+
 .ap-cta__left h3 {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: clamp(24px, 3vw, 38px);
@@ -3162,20 +3221,25 @@ select:focus+.field-icon {
   line-height: 1.15;
   margin-bottom: 10px;
 }
-.ap-cta__left h3 em { font-style: italic; color: var(--ocre); }
+
+.ap-cta__left h3 em {
+  font-style: italic;
+  color: var(--ocre);
+}
+
 .ap-cta__left p {
   font-size: 0.88rem;
   color: var(--gris);
   line-height: 1.7;
 }
- 
+
 .ap-cta__right {
   display: flex;
   gap: 14px;
   align-items: center;
   flex-wrap: wrap;
 }
- 
+
 /* Bouton principal sweep ocre */
 .ap-btn-primary {
   display: inline-flex;
@@ -3194,6 +3258,7 @@ select:focus+.field-icon {
   overflow: hidden;
   transition: color 0.35s, box-shadow 0.35s;
 }
+
 .ap-btn-primary::before {
   content: '';
   position: absolute;
@@ -3203,13 +3268,21 @@ select:focus+.field-icon {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 0;
 }
+
 .ap-btn-primary:hover {
   color: var(--noir);
   box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
 }
-.ap-btn-primary:hover::before { transform: translateX(0); }
-.ap-btn-primary span { position: relative; z-index: 1; }
- 
+
+.ap-btn-primary:hover::before {
+  transform: translateX(0);
+}
+
+.ap-btn-primary span {
+  position: relative;
+  z-index: 1;
+}
+
 /* Bouton ghost */
 .ap-btn-ghost {
   display: inline-flex;
@@ -3227,49 +3300,97 @@ select:focus+.field-icon {
   text-decoration: none;
   transition: border-color 0.3s, color 0.3s;
 }
+
 .ap-btn-ghost:hover {
   border-color: var(--ocre);
   color: var(--ocre);
 }
- 
+
 /* ============================================================
    OBSERVER — classe utilitaire pour scroll reveal
    ============================================================ */
- 
+
 .ap-reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
+
 .ap-reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
-.ap-reveal--delay-1 { transition-delay: 0.1s; }
-.ap-reveal--delay-2 { transition-delay: 0.2s; }
-.ap-reveal--delay-3 { transition-delay: 0.3s; }
- 
+
+.ap-reveal--delay-1 {
+  transition-delay: 0.1s;
+}
+
+.ap-reveal--delay-2 {
+  transition-delay: 0.2s;
+}
+
+.ap-reveal--delay-3 {
+  transition-delay: 0.3s;
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
- 
+
 @media (max-width: 960px) {
-  .ap-hero__inner         { padding: 80px 24px 80px 24px; }
-  .ap-hero__vline         { display: none; }
-  .ap-hero__scroll        { display: none; }
- 
-  .ap-intro               { grid-template-columns: 1fr; padding: 60px 24px; gap: 36px; }
-  .ap-intro__left         { position: static; }
-  .ap-intro__number       { font-size: 72px; }
- 
-  .ap-expertises          { padding: 60px 24px; }
-  .ap-expertises__grid    { grid-template-columns: 1fr; }
- 
-  .ap-accompagnement      { padding: 60px 24px; }
-  .ap-cards               { grid-template-columns: 1fr; }
- 
-  .ap-engagement__inner   { padding: 60px 24px; }
- 
-  .ap-cta                 { padding: 60px 24px; flex-direction: column; align-items: flex-start; }
-  .ap-cta__right          { width: 100%; }
+  .ap-hero__inner {
+    padding: 80px 24px 80px 24px;
+  }
+
+  .ap-hero__vline {
+    display: none;
+  }
+
+  .ap-hero__scroll {
+    display: none;
+  }
+
+  .ap-intro {
+    grid-template-columns: 1fr;
+    padding: 60px 24px;
+    gap: 36px;
+  }
+
+  .ap-intro__left {
+    position: static;
+  }
+
+  .ap-intro__number {
+    font-size: 72px;
+  }
+
+  .ap-expertises {
+    padding: 60px 24px;
+  }
+
+  .ap-expertises__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ap-accompagnement {
+    padding: 60px 24px;
+  }
+
+  .ap-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ap-engagement__inner {
+    padding: 60px 24px;
+  }
+
+  .ap-cta {
+    padding: 60px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ap-cta__right {
+    width: 100%;
+  }
 }
