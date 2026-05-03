@@ -1627,6 +1627,110 @@ select:focus+.field-icon {
   margin-bottom: 4px;
 }
 
+/* ── Carte contact principale ── */
+.contact-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+ 
+/* En-tête de la carte */
+.contact-card__header {
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid var(--border);
+}
+ 
+.contact-card__eyebrow {
+  font-size: 9.5px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--ocre);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+ 
+.contact-card__title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--noir);
+  line-height: 1.15;
+}
+ 
+/* Ligne de contact (téléphone, email, adresse) */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  transition: background 0.2s;
+  background: transparent;
+}
+.contact-row:last-child {
+  border-bottom: none;
+}
+.contact-row:is(a):hover {
+  background: var(--creme);
+}
+ 
+/* Icône */
+.contact-row__icon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+/* Texte */
+.contact-row__body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+ 
+.contact-row__label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gris);
+  font-weight: 600;
+}
+ 
+.contact-row__value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--noir);
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+  word-break: break-all;
+}
+ 
+/* Chevron indicateur de lien */
+.contact-row__arrow {
+  margin-left: auto;
+  flex-shrink: 0;
+  opacity: 0.2;
+  transition: opacity 0.2s, transform 0.2s;
+  color: var(--noir);
+}
+.contact-row:is(a):hover .contact-row__arrow {
+  opacity: 0.5;
+  transform: translateX(3px);
+}
+ 
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .contact-card__header { padding: 20px 20px 16px; }
+  .contact-row          { padding: 18px 20px; }
+}
+
+
 /* ========================
       FORMATION ENDUIT
     ========================== */
