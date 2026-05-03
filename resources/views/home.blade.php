@@ -193,11 +193,9 @@
             <h2>Les partenaires</h2>
         </div>
         <div class="partenaires-row">
-            <div class="partner-box">Tollens</div>
-            <div class="partner-box">Sikkens</div>
-            <div class="partner-box">Graco</div>
-            <div class="partner-box">Knauf</div>
-            <div class="partner-box">Bostik</div>
+            <div class="partner-box">
+                <img src="{{ asset('storage/partners/beissier.jpeg') }}" alt="image de partenaire beissier" width="150" height="150">
+            </div>
         </div>
     </section>
 </x-layout>
