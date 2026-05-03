@@ -659,6 +659,7 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 25px;
   border-radius: 4px;
 }
 
@@ -806,6 +807,16 @@ footer {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 56px;
   padding: 72px 60px 56px;
+
+  & p{
+    color: var(--blanc);
+  }
+
+  & div:first-child {
+    display: grid;
+    place-items: center;
+    gap: 10px
+  }
 }
 
 .footer-desc {
@@ -819,7 +830,6 @@ footer {
 .social-links {
   display: flex;
   gap: 10px;
-  margin-top: 28px;
 
   &>a svg {
     fill: var(--blanc)
@@ -839,7 +849,7 @@ footer {
   font-weight: 600;
 }
 
-.footer-col a {
+.footer-col:not(:first-child) a {
   display: block;
   color: var(--blanc);
   text-decoration: none;

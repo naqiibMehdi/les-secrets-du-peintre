@@ -195,6 +195,7 @@
         <div class="partenaires-row">
             <div class="partner-box">
                 <img src="{{ asset('storage/partners/beissier.jpeg') }}" alt="image de partenaire beissier" width="150" height="150">
+                <img src="{{ asset('storage/partners/pygmalion.jpeg') }}" alt="image de partenaire pygmalion" width="150" height="150">
             </div>
         </div>
     </section>
