@@ -96,7 +96,7 @@
                     <div class="ap-expertises__grid">
 
                         <div class="ap-expertise-group ap-reveal">
-                            <div class="ap-expertise-group__icon">🪣</div>
+                            <div class="ap-expertise-group__icon"><i class="fa-solid fa-bucket"></i></div>
                             <h3 class="ap-expertise-group__title">Travaux de finition</h3>
                             <ul class="ap-expertise-group__list">
                                 <li>Préparation des supports</li>
@@ -107,7 +107,7 @@
                         </div>
 
                         <div class="ap-expertise-group ap-reveal ap-reveal--delay-1">
-                            <div class="ap-expertise-group__icon">🎓</div>
+                            <div class="ap-expertise-group__icon"><i class="fa-solid fa-certificate"></i></div>
                             <h3 class="ap-expertise-group__title">Formation professionnelle</h3>
                             <ul class="ap-expertise-group__list">
                                 <li>Formations concrètes, basées sur la pratique terrain</li>
@@ -135,7 +135,9 @@
                 <div class="ap-cards">
 
                     <div class="ap-card ap-reveal">
-                        <div class="ap-card__icon">🏠</div>
+                        <div class="split-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
                         <h3 class="ap-card__title">Particuliers</h3>
                         <p class="ap-card__desc">
                             Vous souhaitez rénover votre intérieur sans mauvaises surprises ? Je vous accompagne dans
@@ -147,7 +149,7 @@
                     </div>
 
                     <div class="ap-card ap-reveal ap-reveal--delay-1">
-                        <div class="ap-card__icon">🔨</div>
+                        <div class="split-icon"><i class="fa-solid fa-hammer"></i></div>
                         <h3 class="ap-card__title">Professionnels</h3>
                         <p class="ap-card__desc">
                             Artisans en reconversion ou cherchant à monter en compétences, mes formations vous
@@ -158,7 +160,7 @@
                     </div>
 
                     <div class="ap-card ap-reveal ap-reveal--delay-2">
-                        <div class="ap-card__icon">🏗️</div>
+                        <div class="split-icon"><i class="fa-solid fa-building"></i></div>
                         <h3 class="ap-card__title">Entreprises</h3>
                         <p class="ap-card__desc">
                             Vous avez besoin de conseils techniques fiables pour vos équipes ou vos projets ?
@@ -188,7 +190,7 @@
                         Vous garantir un travail de qualité, des conseils précis et des résultats durables,
                         <em>dans le respect des règles de l'art.</em>
                     </blockquote>
-                    <a href="/devis" class="ap-btn-primary">
+                    <a href="{{ route('quote') }}" class="ap-btn-primary">
                         <span>Demander un devis gratuit →</span>
                     </a>
                 </div>
@@ -198,7 +200,7 @@
             {{-- ╔══════════════════════════════════════════════════
              ║  CTA FINAL
              ╚══════════════════════════════════════════════════ --}}
-            <section class="ap-cta ap-reveal">
+            {{-- <section class="ap-cta ap-reveal">
                 <div class="ap-cta__left">
                     <h3>Prêt à démarrer<br><em>votre projet ?</em></h3>
                     <p>Contactez-moi pour un devis gratuit ou découvrez nos formations disponibles. Réponse sous 24h.
@@ -212,7 +214,7 @@
                         Voir les formations
                     </a>
                 </div>
-            </section>
+            </section> --}}
 
     </div>
 

@@ -53,6 +53,25 @@ h1 {
   text-wrap: balance;
 }
 
+.split-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--anth);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ocre);
+  font-size: 1.3rem;
+  transition: background .3s;
+}
+
+.split-block:hover .split-icon,
+.ap-card:hover .split-icon {
+  background: var(--ocre);
+  color: var(--noir);
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -723,6 +742,7 @@ nav a:hover::after {
   height: 44px;
   border-radius: 50%;
   background: var(--anth2);
+  color: var(--ocre);
   border: 2px solid var(--ocre);
   display: flex;
   align-items: center;
@@ -808,7 +828,7 @@ footer {
   gap: 56px;
   padding: 72px 60px 56px;
 
-  & p{
+  & p {
     color: var(--blanc);
   }
 
@@ -1644,13 +1664,13 @@ select:focus+.field-icon {
   border-radius: 8px;
   overflow: hidden;
 }
- 
+
 /* En-tête de la carte */
 .contact-card__header {
   padding: 24px 28px 20px;
   border-bottom: 1px solid var(--border);
 }
- 
+
 .contact-card__eyebrow {
   font-size: 9.5px;
   letter-spacing: 3.5px;
@@ -1659,7 +1679,7 @@ select:focus+.field-icon {
   font-weight: 700;
   margin-bottom: 8px;
 }
- 
+
 .contact-card__title {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: 1.4rem;
@@ -1667,7 +1687,7 @@ select:focus+.field-icon {
   color: var(--noir);
   line-height: 1.15;
 }
- 
+
 /* Ligne de contact (téléphone, email, adresse) */
 .contact-row {
   display: flex;
@@ -1679,13 +1699,15 @@ select:focus+.field-icon {
   transition: background 0.2s;
   background: transparent;
 }
+
 .contact-row:last-child {
   border-bottom: none;
 }
+
 .contact-row:is(a):hover {
   background: var(--creme);
 }
- 
+
 /* Icône */
 .contact-row__icon {
   width: 25px;
@@ -1703,7 +1725,7 @@ select:focus+.field-icon {
   gap: 5px;
   min-width: 0;
 }
- 
+
 .contact-row__label {
   font-size: 9px;
   letter-spacing: 2px;
@@ -1711,7 +1733,7 @@ select:focus+.field-icon {
   color: var(--gris);
   font-weight: 600;
 }
- 
+
 .contact-row__value {
   font-size: 0.92rem;
   font-weight: 600;
@@ -1720,7 +1742,7 @@ select:focus+.field-icon {
   line-height: 1.4;
   word-break: break-all;
 }
- 
+
 /* Chevron indicateur de lien */
 .contact-row__arrow {
   margin-left: auto;
@@ -1729,15 +1751,21 @@ select:focus+.field-icon {
   transition: opacity 0.2s, transform 0.2s;
   color: var(--noir);
 }
+
 .contact-row:is(a):hover .contact-row__arrow {
   opacity: 0.5;
   transform: translateX(3px);
 }
- 
+
 /* ── Responsive ── */
 @media (max-width: 960px) {
-  .contact-card__header { padding: 20px 20px 16px; }
-  .contact-row          { padding: 18px 20px; }
+  .contact-card__header {
+    padding: 20px 20px 16px;
+  }
+
+  .contact-row {
+    padding: 18px 20px;
+  }
 }
 
 
@@ -2873,6 +2901,7 @@ select:focus+.field-icon {
   top: 100px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
@@ -2881,7 +2910,7 @@ select:focus+.field-icon {
   font-size: 100px;
   font-weight: 700;
   line-height: 1;
-  color: var(--creme2);
+  color: var(--ocre);
   letter-spacing: -4px;
   user-select: none;
 }
@@ -3003,7 +3032,7 @@ select:focus+.field-icon {
 .ap-expertises__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3px;
+  gap: 10px;
 }
 
 .ap-expertise-group {
@@ -3031,6 +3060,7 @@ select:focus+.field-icon {
 .ap-expertise-group:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(201, 168, 76, 0.2);
+  box-shadow: 0 3px 10px var(--blanc);
 }
 
 .ap-expertise-group:hover::before {
@@ -3041,6 +3071,7 @@ select:focus+.field-icon {
   width: 50px;
   height: 50px;
   background: rgba(201, 168, 76, 0.1);
+  color: var(--ocre);
   border-radius: 10px;
   display: flex;
   align-items: center;

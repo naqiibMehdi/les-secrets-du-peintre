@@ -19,3 +19,7 @@ Route::get("/courses/coated", function(){
 Route::get("/about", function(){
     return view("about");
 })->name("about");
+
+Route::get("/audit", function(){
+    return view("formations.audit");
+})->name("audit");

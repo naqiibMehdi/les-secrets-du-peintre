@@ -79,7 +79,7 @@
                 <input type="checkbox" id="cat-diag" name="categories[]" value="diagnostic" />
                 <label class="cat-label" for="cat-diag">
                     <div class="cat-check"></div>
-                    Diagnostics travaux
+                    Audit / Conseil Travaux
                 </label>
             </div>
             <div class="cat-item">
@@ -90,10 +90,10 @@
                 </label>
             </div>
             <div class="cat-item">
-                <input type="checkbox" id="cat-real" name="categories[]" value="realisation" />
+                <input type="checkbox" id="cat-real" name="categories[]" value="others" />
                 <label class="cat-label" for="cat-real">
                     <div class="cat-check"></div>
-                    Réalisation
+                    Autres
                 </label>
             </div>
             @error('categories')

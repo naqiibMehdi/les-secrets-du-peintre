@@ -40,9 +40,8 @@
             </div>
         </div>
         <div class="footer-col">
-            <h4>Formations</h4><a href="#">Formation airless</a><a href="#">Formation enduits</a><a
-                href="#">Diagnostics
-                travaux</a><a href="#">Accompagnement 1 mois</a>
+            <h4>Formations</h4><a href="#">Formation airless</a><a href="{{  route('enduit') }}">Formation enduits</a><a
+                href="{{ route('audit') }}">Audit / Conseil Travaux</a><a href="#">Accompagnement 1 mois</a>
         </div>
         <div class="footer-col">
             <h4>Services</h4><a href="#">Service travaux</a><a href="#">Réalisation</a><a

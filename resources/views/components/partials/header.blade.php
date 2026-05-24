@@ -8,6 +8,7 @@
     </a>
     <nav>
       <a href="{{ route("home") }}">Accueil</a>
+      <a href="{{ route("home") }}">Réalisation</a>
       <a href="#">Contact</a>
       <a href="#" class="btn-nav">Boutique</a>
     </nav>

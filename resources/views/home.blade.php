@@ -35,14 +35,13 @@
                 <div class="services-title">Services</div>
                 <div class="links-list">
                     <a href="#" class="s1-link"><span>Service travaux</span><span class="s1-arrow">→</span></a>
-                    <a href="#" class="s1-link"><span>Diagnostics travaux</span><span
+                    <a href="{{ route('audit') }}" class="s1-link"><span>Audit / Conseil Travaux</span><span
                             class="s1-arrow">→</span></a>
                     <a href="#" class="s1-link"><span>Accompagnement travaux</span><span
                             class="s1-arrow">→</span></a>
                     <a href="{{ route('enduit') }}" class="s1-link"><span>Formation enduits / peinture</span><span
                             class="s1-arrow">→</span></a>
                     <a href="#" class="s1-link"><span>Formation airless</span><span class="s1-arrow">→</span></a>
-                    <a href="#" class="s1-link"><span>Réalisation</span><span class="s1-arrow">→</span></a>
                 </div>
             </div>
         </div>
@@ -148,7 +147,7 @@
                     pédagogue
                     et très disponible.</p>
                 <div class="avis-foot">
-                    <div class="av-avatar">👷</div>
+                    <div class="av-avatar"><i class="fa-solid fa-user"></i></div>
                     <div>
                         <div class="av-name">Thomas R.</div>
                         <div class="av-role">Artisan peintre, Lyon</div>
@@ -162,7 +161,7 @@
                     chantier et
                     des priorités.</p>
                 <div class="avis-foot">
-                    <div class="av-avatar">🏠</div>
+                    <div class="av-avatar"><i class="fa-solid fa-user"></i></div>
                     <div>
                         <div class="av-name">Sophie M.</div>
                         <div class="av-role">Particulière, Bordeaux</div>
@@ -176,7 +175,7 @@
                     toujours
                     de bon conseil.</p>
                 <div class="avis-foot">
-                    <div class="av-avatar">🔧</div>
+                    <div class="av-avatar"><i class="fa-solid fa-user"></i></div>
                     <div>
                         <div class="av-name">Pierre L.</div>
                         <div class="av-role">Maître d'œuvre, Paris</div>
