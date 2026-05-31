@@ -45,7 +45,7 @@ class TimeSlot extends Model
      */
     #[Scope]
 
-    public function Available(Builder $query): Builder
+    public function available(Builder $query): Builder
     {
         return $query
             ->where('is_active', true)

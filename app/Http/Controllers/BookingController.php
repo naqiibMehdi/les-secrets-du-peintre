@@ -28,7 +28,7 @@ class BookingController extends Controller
      */
     public function availableDates(): JsonResponse
     {
-        $dates = TimeSlot::available()
+        $dates = TimeSlot::query()->available()
             ->get()
             ->filter(fn($slot) => $slot->availablePlaces() > 0)
             ->pluck('date')
@@ -47,7 +47,7 @@ class BookingController extends Controller
     {
         $request->validate(['date' => 'required|date']);
 
-        $slots = TimeSlot::available()
+        $slots = TimeSlot::query()->available()
             ->where('date', $request->date)
             ->get()
             ->filter(fn($slot) => $slot->availablePlaces() > 0)
@@ -87,8 +87,8 @@ class BookingController extends Controller
 
         $booking = Booking::create($validated);
 
-        Mail::to($booking->email)
-            ->send(new BookingConfirmation($booking));
+        // Mail::to($booking->email)
+        //     ->send(new BookingConfirmation($booking));
 
         return redirect()->route('bookings.success', ['token' => $booking->token]);
     }
